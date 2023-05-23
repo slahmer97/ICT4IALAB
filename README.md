@@ -30,4 +30,9 @@ ip route add YOLO_IP_SUBNET via IP_ADDRS_OF_CALICO_NODE
 #Finally, you will use curl as an HTTP client, you can find the cmd in ict4ia/client/curls file; just execute that cmd by replacing localhost by the ip address of the YOLO-V3-IP; the first time that you execute that cmd will take some seconds, as it will download the model; afterward, it should be taking few ms per request!
 
 
+# DO NOT APPLY THIS UNTIL HTTP's LOG DISPLAY THAT THE SERVER IS RUNNING
+kubectl apply -f service.yaml
+ip route add YOLO_SVC_IP via IP_ADDRS_OF_CALICO_NODE
+
+
 ```
